@@ -3,15 +3,16 @@ package com.webaligo.simpleapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val btnClickMe = findViewById<Button>(R.id.helloButton)
-        btnClickMe.setOnClickListener {
-            btnClickMe.text = "Oh, you clicked me!"
+        val helloTxtView = findViewById<TextView>(R.id.helloText)
+        helloTxtView.setOnClickListener {
+            helloTxtView.text = "Oh, you clicked me!"
         }
     }
 }
