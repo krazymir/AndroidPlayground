@@ -2,10 +2,8 @@ package com.webaligo.kotlinsandbox
 
 fun main(){
 
-    // Arithmetics
-    var res = 93.0 + 32
-    res /= 2
-
+    // Booleans
+    val res = 5 < 12 && 5 != null
     println("The result is ${res}")
 
 
