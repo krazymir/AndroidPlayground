@@ -17,7 +17,7 @@ fun main(){
 
     val h = 'a'
 
-    println("The Universe is " + secontsUnverseLife.toString() + " old")
+    println("The Universe is ${secontsUnverseLife.toString()} old")
     println("The first digit is " + strSecs[0])
     println("The last digit is " + strSecs[strSecs.length - 1])
 }
