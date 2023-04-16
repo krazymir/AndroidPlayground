@@ -36,6 +36,10 @@ fun main(){
     }
 
     for(i in 3.downTo(1).step(2)){
+        if(i < 3){
+            continue
+        }
         println("For $i")
+        break;
     }
 }
