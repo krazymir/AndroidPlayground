@@ -8,12 +8,11 @@ fun main(){
     num2 *= 2
     num2 += 2
     val res = (num shl 1) == num2
-    if((num shl 1) == num2) {
-        println("The result is ${res}")
-    }else if (false){
-        println("Something is broken!!!")
-    }else {
-        println("Something is broken!!!")
+    when (res){
+        true -> println("All makes sense!")
+        false -> {
+            println("Nothing makes sense!")
+        }
     }
 
 }
