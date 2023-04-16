@@ -13,6 +13,9 @@ fun main(){
         0 -> {
             println("Nothing makes sense!")
         }
+        else -> {
+            println("Nothing makes sense!")
+        }
     }
 
 }
