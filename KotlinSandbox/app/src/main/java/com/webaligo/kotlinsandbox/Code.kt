@@ -8,9 +8,9 @@ fun main(){
     num2 *= 2
     num2 += 2
     val res = (num shl 1) == num2
-    when (res){
-        true -> println("All makes sense!")
-        false -> {
+    when (num2){
+        in 1..100 -> println("All makes sense!")
+        0 -> {
             println("Nothing makes sense!")
         }
     }
