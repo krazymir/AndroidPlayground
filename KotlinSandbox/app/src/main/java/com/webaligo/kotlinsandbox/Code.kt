@@ -2,13 +2,15 @@ package com.webaligo.kotlinsandbox
 
 fun main(){
 
-    // Booleans & if statements
 
-    var num = 4.0
+    var nullableStr : String? = "Yey"
+    val nullableLength = nullableStr?.length
 
-    println(avg(num, num +3))
-}
+    nullableLength?.let{println("The length is $nullableLength")}
+//  The Elvis operator
+    val notNullableStr = nullableStr ?:"Yey, Elvis!"
+    println("The string is $notNullableStr")
 
-fun avg(a:Double, b:Double): Double{
-    return (a + b) / 2
+//  Not null assertion operator - it will throw KotlinNullPointerException if the value is null
+    println("The upper case string is ${nullableStr!!.uppercase()}")
 }
