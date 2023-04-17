@@ -4,42 +4,11 @@ fun main(){
 
     // Booleans & if statements
 
-    var num = 4
+    var num = 4.0
 
-    while(num < 17){
+    println(avg(num, num +3))
+}
 
-        if(num % 3 == 0 && num % 5 == 0){
-            println("$num FizzBuzz")
-        }else if(num % 3 == 0){
-            println("$num Fizz")
-        }else if(num % 5 == 0){
-            println("$num Buzz")
-        }
-        num++
-    }
-
-    num = 0
-    do{
-        println("$num")
-    }while (++num < 10)
-
-    for(i in 0..10){
-        println("For $i")
-    }
-
-    for(i in 0 until 10){
-        println("For $i")
-    }
-
-    for(i in 3 downTo 1 step 2){
-        println("For $i")
-    }
-
-    for(i in 3.downTo(1).step(2)){
-        if(i < 3){
-            continue
-        }
-        println("For $i")
-        break;
-    }
+fun avg(a:Double, b:Double): Double{
+    return (a + b) / 2
 }
