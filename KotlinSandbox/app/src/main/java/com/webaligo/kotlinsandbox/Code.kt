@@ -1,17 +1,46 @@
 package com.webaligo.kotlinsandbox
 
+import android.media.MediaActionSound
+
 fun main(){
-
-
-    var nullableStr : String? = "Yey"
-    val nullableLength = nullableStr?.length
-
-    // Using the let operator
-    nullableLength?.let{println("The length is $nullableLength")}
-    // The Elvis operator
-    val notNullableStr = nullableStr ?:"Yey, Elvis!"
-    println("The string is $notNullableStr")
-
-    // Not null assertion operator - it will throw KotlinNullPointerException if the value is null
-    println("The upper case string is ${nullableStr!!.uppercase()}")
+    val fluffy = Animal("Fluffy", "Polar bear")
+    val bear = Animal(species = "bear")
+    val default = Animal()
+    fluffy.introduction()
+    bear.introduction()
+    default.introduction()
+    println(fluffy.name)
+    bear.sound = "Roar!!!"
+    bear.makeSound()
 }
+
+class Animal public constructor(name: String = "no name", species: String = "no species"){
+    // Only get
+    var name: String
+        get() {
+            return field.lowercase()
+        }
+    // Late init
+    private lateinit var species: String
+    // Only set
+    var sound: String = "no sound"
+        set(value) {
+            field = value
+        }
+    init{
+        this.name = name
+        this.species = species
+    }
+    constructor(name: String = "no name", species: String = "no species", sound: String = "no sound"):this(name,species){
+        this.sound = sound
+    }
+
+    fun introduction(){
+        println("Hi, my name is ${name?:"Nobody"} and I am of species $species!")
+    }
+
+    fun makeSound(){
+        println(this.sound)
+    }
+}
+
