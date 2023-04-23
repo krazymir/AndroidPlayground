@@ -1,12 +1,45 @@
 package com.webaligo.kotlinsandbox
 
-data class Animal(val name: String, val species: String)
-fun main(){
-    val bear = Animal("Paddington", "bear")
-    val newcomer = Animal("Paddington", "bear")
-    println(bear.equals(newcomer))
+interface Livable{
+    var name:String
+    var species:String
+    var weightKilos:Double
+    fun makeSound(){
+        println("blop")
+    }
 
-    val copy = newcomer.copy()
-    println("${copy.toString()}")
+    fun addWeight(amount: Double){
+        weightKilos+=amount
+    }
+}
+
+open class Animal() : Livable{
+
+    override var name:String = "no name"
+    override var species:String = "unidentified"
+    override var weightKilos:Double = 0.0
+    constructor(name: String, species:String) : this() {
+        this.name = name
+        this.species = species
+    }
+
+    fun move(distanceMeters: Double){
+        println("${this.name} by $distanceMeters meters")
+    }
+}
+
+class Bear(name: String, species: String, furColor:String) : Animal(name, species){
+    override fun makeSound(){
+        println("Look for the bear necessities, the simple bear necessities...")
+    }
+}
+
+fun main(){
+    val bear = Bear("Baloo", "bear", "blown")
+    val newcomer = Bear("Count Dracula", "vampire", "white")
+    println(bear == newcomer)
+    bear.addWeight(5.0)
+    bear.move(3.5)
+    bear.makeSound()
 }
 
