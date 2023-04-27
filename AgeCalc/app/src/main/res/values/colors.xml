@@ -4,4 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="textBlue">#264654</color>
     <color name="bgColor">#e9c66b</color>
+    <color name="bgButton">#2a9d8f</color>
+    <color name="lightGrey">#aaaaaa</color>
 </resources>

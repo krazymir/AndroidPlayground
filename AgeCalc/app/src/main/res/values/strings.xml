@@ -1,4 +1,7 @@
 <resources>
-    <string name="app_name">AgeCalc</string>
-    <string name="welcome_message">YOUR</string>
+    <string name="app_name">Age Calculator</string>
+    <string name="welcome_message">Your</string>
+    <string name="age_message">Age</string>
+    <string name="in_minutes_message">In Minutes</string>
+    <string name="select_date">Select Date</string>
 </resources>
