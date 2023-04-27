@@ -1,26 +1,16 @@
 package com.webaligo.kotlinsandbox
 
 fun main() {
-    var nums = setOf(1,5,6,100)
+    val chewy = mapOf<String, BubbleGum>("Favourite" to BubbleGum("Orbit", 2.44), "Best" to BubbleGum("Turbo", 3.44))
 
-    for(elem in nums){
-        println("${elem.toString()},")
+    for(key in chewy.keys){
+        println("$key - ${chewy[key]}")
     }
-    println(nums.size)
-    var mutableNumbners = nums.toMutableSet()
-    mutableNumbners.add(12)
-    mutableNumbners.add(12)
-    print(mutableNumbners)
-
-    val bg = BubbleGum("Turbo", 2.44)
-    val bg2 = BubbleGum("Orbit", 3.44)
-
-    val chewy = mutableSetOf<BubbleGum>(bg, bg2, bg.copy())
-    println(chewy)
-    chewy.removeIf { it.price > 3 }
-    println(chewy)
-
-
+    var mutableChewy = chewy.toMutableMap()
+    mutableChewy.put("Best Bubbles", BubbleGum("Hubba Bubba", 2.88))
+    for(key in mutableChewy.keys){
+        println("$key - ${mutableChewy[key]}")
+    }
 
 }
 
