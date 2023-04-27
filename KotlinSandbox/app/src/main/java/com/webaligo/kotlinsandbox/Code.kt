@@ -1,18 +1,20 @@
 package com.webaligo.kotlinsandbox
 
 fun main() {
-    val chewy = mapOf<String, BubbleGum>("Favourite" to BubbleGum("Orbit", 2.44), "Best" to BubbleGum("Turbo", 3.44))
-
-    for(key in chewy.keys){
-        println("$key - ${chewy[key]}")
+    val nums = ArrayList<Double>()
+    var avg = 0.0
+    nums.add(3.54)
+    nums.add(4.66)
+    nums.add(386.34)
+    nums.add(-32.99)
+    nums.add(3322.12)
+    nums.add(2.009)
+    nums.add(-992.0)
+    println("Average is ${nums.average()}")
+    for(n in nums){
+        avg += n
     }
-    var mutableChewy = chewy.toMutableMap()
-    mutableChewy.put("Best Bubbles", BubbleGum("Hubba Bubba", 2.88))
-    for(key in mutableChewy.keys){
-        println("$key - ${mutableChewy[key]}")
-    }
-
+    avg /= nums.size
+    println("Manual average is ${nums.average()}")
 }
-
-data class BubbleGum(val name: String, val price: Double)
 
