@@ -1,22 +1,23 @@
 package com.webaligo.kotlinsandbox
 
 fun main() {
-    var nums = listOf(1,5,6,100).toMutableList()
+    var nums = setOf(1,5,6,100)
 
     for(elem in nums){
         println("${elem.toString()},")
     }
-    println(nums[2])
-    nums.add(12)
-    print(nums[2])
-    println(nums[2])
+    println(nums.size)
+    var mutableNumbners = nums.toMutableSet()
+    mutableNumbners.add(12)
+    mutableNumbners.add(12)
+    print(mutableNumbners)
 
     val bg = BubbleGum("Turbo", 2.44)
     val bg2 = BubbleGum("Orbit", 3.44)
 
-    val chewy = mutabistOf(bg, bg2, bg.copy())
+    val chewy = mutableSetOf<BubbleGum>(bg, bg2, bg.copy())
     println(chewy)
-    chewy.removeAll
+    chewy.removeIf { it.price > 3 }
     println(chewy)
 
 
