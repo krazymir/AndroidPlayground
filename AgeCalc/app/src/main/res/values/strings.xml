@@ -2,6 +2,7 @@
     <string name="app_name">Age Calculator</string>
     <string name="welcome_message">Your</string>
     <string name="age_message">Age</string>
-    <string name="in_minutes_message">In Minutes</string>
+    <string name="in_weeks_message">In Weeks</string>
     <string name="select_date">Select Date</string>
+    <string name="interval_name">Weeks</string>
 </resources>

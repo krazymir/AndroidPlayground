@@ -36,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/in_minutes_message"
+        android:text="@string/in_weeks_message"
         android:textAllCaps="true"
         android:textColor="@color/textBlue"
         android:textSize="25sp"
@@ -73,7 +73,7 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/selectedTime"
+        android:id="@+id/ageInMinutes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -87,7 +87,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Minutes"
+        android:text="@string/interval_name"
         android:textColor="@color/lightGrey"
         android:textSize="16sp"
         android:textStyle="bold" />
