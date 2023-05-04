@@ -5,5 +5,8 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.NuCalc" parent="Base.Theme.NuCalc" />
+    <style name="Theme.NuCalc" parent="Base.Theme.NuCalc">
+        <item name="colorPrimary">@color/grey</item>
+        <item name="colorPrimaryVariant">@color/grey</item>
+    </style>
 </resources>
